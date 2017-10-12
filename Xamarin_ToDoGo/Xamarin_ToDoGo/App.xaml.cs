@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Xamarin.Forms;
 
 namespace Xamarin_ToDoGo
@@ -12,8 +11,7 @@ namespace Xamarin_ToDoGo
         public App()
         {
             InitializeComponent();
-
-            MainPage = new Xamarin_ToDoGo.MainPage();
+            MainPage = new Xamarin_ToDoGo.GreetPage();
         }
 
         protected override void OnStart()

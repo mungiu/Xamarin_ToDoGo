@@ -11,7 +11,7 @@ namespace Xamarin_ToDoGo
         public App()
         {
             InitializeComponent();
-            MainPage = new Xamarin_ToDoGo.GreetPage();
+            MainPage = new Xamarin_ToDoGo.QuotesPage();
         }
 
         protected override void OnStart()

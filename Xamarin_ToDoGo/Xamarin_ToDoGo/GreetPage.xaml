@@ -2,9 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Xamarin_ToDoGo.GreetPage">
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
-        <Label Text="Goal Progress:"/>
-        <Label HorizontalOptions="Center" x:Name="label"/>
-        <Slider ValueChanged="Slider_ValueChanged" x:Name="slider"/>
+    <StackLayout HorizontalOptions="Center" 
+                 VerticalOptions="Start">
+        <Label Text="Goal progress:"/>
+        <Label 
+            BindingContext="{x:Reference slider}"
+            Text="{Binding Value, StringFormat='{0:P0}'}"
+            HorizontalTextAlignment="Center"/>
+        <Slider x:Name="slider"/>
     </StackLayout>
 </ContentPage>

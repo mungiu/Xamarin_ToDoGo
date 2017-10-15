@@ -15,13 +15,7 @@ namespace Xamarin_ToDoGo
         public GreetPage()
         {
             InitializeComponent();
-
             slider.Value = 0.001;
-        }
-
-        private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
-        {
-            label.Text = String.Format($"{e.NewValue:P0}");
         }
     }
 }

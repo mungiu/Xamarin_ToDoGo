@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    BackgroundColor="#127ac7"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Xamarin_ToDoGo.LoginPage">
+    <ContentPage.Content>
+        <StackLayout
+            Spacing="20"
+            VerticalOptions="Center">
+            <StackLayout.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform = "iOS" Value="0,20,0,0"/>
+                    <On Platform = "Android" Value="0,30,0,0"/>
+                    <On Platform = "WinPhone, Windows" Value="20,40,20,20"/>
+                </OnPlatform>
+            </StackLayout.Margin>
+            <StackLayout Spacing="20">
+                <Label Text="Welcome to Space"
+                       HorizontalOptions="Center" 
+                       TextColor="White"
+                       FontSize="Large"
+                       FontAttributes="Bold"/>
+                <Label Text="Find your spaceship"
+                       HorizontalOptions="Center"
+                       TextColor="WhiteSmoke"/>
+            </StackLayout>
+
+            <Button Text="Login"
+                    BackgroundColor="#1dabf0"
+                    TextColor="WhiteSmoke"
+                    Margin="2"/>
+            <Button Text="Register"
+                    BackgroundColor="#1dabf0"
+                    TextColor="WhiteSmoke"
+                    Margin="2"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

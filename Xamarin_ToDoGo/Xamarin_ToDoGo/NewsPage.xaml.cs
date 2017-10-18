@@ -18,14 +18,14 @@ namespace Xamarin_ToDoGo
 		{
 			InitializeComponent ();
             userID.Text = "userandrei";
-            bookmarkCount.Text = bkm.ToString();
+            bookmarkCount.Text = $"Bookmarks count: {bkm}";
         }
 
 
         private void BtnBookmarkClicked(object sender, EventArgs e)
         {
             bkm++;
-            bookmarkCount.Text = bkm.ToString();
+            bookmarkCount.Text = $"Bookmarks count: {bkm}";
         }
 
         private void BtnPrevClicked(object sender, EventArgs e)

@@ -11,7 +11,7 @@ namespace Xamarin_ToDoGo
         public App()
         {
             InitializeComponent();
-            MainPage = new Xamarin_ToDoGo.DialerPage();
+            MainPage = new Xamarin_ToDoGo.NewsPage();
         }
 
         protected override void OnStart()

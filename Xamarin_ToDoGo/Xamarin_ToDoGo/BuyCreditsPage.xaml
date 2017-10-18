@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin_ToDoGo.BuyCreditsPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0,20,0,0"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <AbsoluteLayout>
+        <BoxView Color="#f7f7f7"
+                 AbsoluteLayout.LayoutBounds="0,0,1,0.3" AbsoluteLayout.LayoutFlags="All"/>
+        <StackLayout Spacing="0"
+            AbsoluteLayout.LayoutBounds="0,0,1,0.3" AbsoluteLayout.LayoutFlags="All">
+            <Label x:Name="currentCredits"
+                   TextColor="#33353a"
+                   FontSize="60"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"/>
+            <Button x:Name="addCredits"
+                    Text="Add credits"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="#1695A3"
+                    BorderRadius="15"
+                    HeightRequest="31"
+                    FontSize="Micro"
+                    FontAttributes="Bold"
+                    Clicked="AddCredits_Clicked"
+                    HorizontalOptions="Center"/>
+        </StackLayout>
+        <StackLayout Padding="20"
+                     AbsoluteLayout.LayoutBounds="0,1,1,0.7" AbsoluteLayout.LayoutFlags="All">
+            <Label Text="Why add credits?"
+                   FontSize="15"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+            <Label FontSize="13"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center">
+Credits ensure that you can save 
+your game progress 
+at any moment in time.
+            </Label>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

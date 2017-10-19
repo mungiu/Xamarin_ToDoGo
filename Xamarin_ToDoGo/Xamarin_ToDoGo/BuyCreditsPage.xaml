@@ -7,16 +7,41 @@
             <On Platform="iOS" Value="0,20,0,0"/>
         </OnPlatform>
     </ContentPage.Padding>
-    <AbsoluteLayout>
-        <BoxView Color="#f7f7f7"
-                 AbsoluteLayout.LayoutBounds="0,0,1,0.3" AbsoluteLayout.LayoutFlags="All"/>
+    <RelativeLayout>
+        <BoxView x:Name="upperBar" 
+                 Color="#f7f7f7"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.3}"/>
         <StackLayout Spacing="0"
-            AbsoluteLayout.LayoutBounds="0,0,1,0.3" AbsoluteLayout.LayoutFlags="All">
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.3}">
             <Label x:Name="currentCredits"
                    TextColor="#33353a"
                    FontSize="60"
                    FontAttributes="Bold"
-                   HorizontalTextAlignment="Center"/>
+                   HorizontalTextAlignment="Center"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=uppderBar,
+            Property=Width,
+            Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=uppderBar,
+            Property=Height,
+            Factor=1}"/>
             <Button x:Name="addCredits"
                     Text="Add credits"
                     TextColor="WhiteSmoke"
@@ -29,7 +54,16 @@
                     HorizontalOptions="Center"/>
         </StackLayout>
         <StackLayout Padding="20"
-                     AbsoluteLayout.LayoutBounds="0,1,1,0.7" AbsoluteLayout.LayoutFlags="All">
+                     RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=upperBar,
+            Property=Height,
+            Factor=1,
+            Constant=30}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}">
             <Label Text="Why add credits?"
                    FontSize="15"
                    FontAttributes="Bold"
@@ -42,5 +76,5 @@ your game progress
 at any moment in time.
             </Label>
         </StackLayout>
-    </AbsoluteLayout>
+    </RelativeLayout>
 </ContentPage>

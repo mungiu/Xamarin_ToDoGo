@@ -11,7 +11,7 @@ namespace Xamarin_ToDoGo
         public App()
         {
             InitializeComponent();
-            MainPage = new Xamarin_ToDoGo.NewsPage();
+            MainPage = new Xamarin_ToDoGo.BuyCreditsPage();
         }
 
         protected override void OnStart()
